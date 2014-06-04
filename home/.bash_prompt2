@@ -72,7 +72,7 @@ function prompt_command
 #        local working_dir=$PWD
  #   fi
 
-    PS1="\n$NO_COLOUR$CORNER_TOP┌─[$PROMPT_COLOR_1$usern$NO_COLOUR]$LINE_TWO[$PROMPT_COLOR_1${dir}$NO_COLOUR]"
+    PS1="\n$NO_COLOUR┌─[$PROMPT_COLOR_1$usern$NO_COLOUR]$LINE_TWO[$PROMPT_COLOR_1${dir}$NO_COLOUR]"
 
     # === Second part of the prompt: git info =================================
     if [ $COLUMNS -gt 98 ];
