@@ -47,11 +47,18 @@ export LESS_TERMCAP_us=$'\E[04;36m' # enter underline mode – cyan
 alias inst='sudo apt-get install'
 alias asou='apt-get source'
 alias acs='apt-cache search'
-alias ad='sudo apt-get upgrade'
+alias acsh='apt-cache show'
+alias acsp='apt-cache showpkg'
+alias acshp='apt-cache showpkg'
+alias ad='sudo apt-get update'
+alias ag='sudo apt-get upgrade'
 alias findpkg='dpkg -l | grep'
 alias acp='apt-cache policy'
-abd='sudo apt-get build-dep'
+alias abd='sudo apt-get build-dep'
 alias rdep='apt-cache rdepends'
+
+## aptitude
+alias sapt='sudo aptitude'
 
 # see versions available from repos in sources.list etc
 alias mad='apt-cache madison'
