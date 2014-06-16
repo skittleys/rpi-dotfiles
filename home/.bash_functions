@@ -8,7 +8,10 @@ function mkdcd {
 # apt-cache show and apt-cache package show info only for that package, but there's TONS of info
 function desc {
         if [[ -n $1 ]]; then
-                res=$(apt-cache show $1 | grep -m 1 "Description\(-en\)\?:" | sed "s/Description\(-en\)\?: //")
-                echo -e "\e[33m$1\e[0m: $res\n"
+                for i in $@
+                do 
+                        res=$(apt-cache show $i | grep -m 1 "Description\(-en\)\?:" | sed "s/Description\(-en\)\?: //")
+                        echo -e "\e[33m$i\e[0m: $res"
+                done
         fi
 }
