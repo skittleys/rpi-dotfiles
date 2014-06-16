@@ -297,3 +297,6 @@ include "/usr/share/nano/pov.nanorc"
 
 ## XML-type files
 include "/usr/share/nano/xml.nanorc"
+
+## Makefiles
+include "/usr/share/nano/makefile.nanorc"
