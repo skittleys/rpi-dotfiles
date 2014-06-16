@@ -22,7 +22,7 @@ esac
 
 if [ "$PROMPT_COLOR_1" == "" ];
 then
-    PROMPT_COLOR_1="\[\033[48;5;12m\]"
+    PROMPT_COLOR_1="\[\033[48;5;27m\]"
 fi
 
 if [ "$PROMPT_COLOR_2" == "" ];
@@ -79,8 +79,8 @@ function prompt_command
     then
         if [ $PS1_GIT_NOT_AVAILABLE = 0 ];
         then
-            local git_branch=$(__git_ps1 '%s')
-            PS1="$PS1${LINE_TWO}[$GIT_BRANCH_COLOR$git_branch$NO_COLOUR]"
+            local git_branch=$(__git_ps1 '[%s]')
+            PS1="$PS1${LINE_TWO}$GIT_BRANCH_COLOR$git_branch$NO_COLOUR"
         fi
         PS1="$PS1${LINE_TWO}${LINE_TWO}$LIGHT_GRAY${LINE_TWO}$GRAY${LINE_TWO}$NO_COLOUR"
     fi
